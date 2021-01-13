@@ -15,8 +15,8 @@ def resample_data_based_on_input(interval_time=1, data_frame=None):
     pass
 
 #moving average
-raw_data = {'month': [1,2,3,4,5,6,7,8,9,10,11,12], 'sales':[290.50,260,288,300,310,303,329.893,340.993,316,330.909,308,310]}
-df = pd.DataFrame(raw_data)
+# raw_data = {'month': [1,2,3,4,5,6,7,8,9,10,11,12], 'sales':[290.50,260,288,300,310,303,329.893,340.993,316,330.909,308,310]}
+# df = pd.DataFrame(raw_data)
 
 def moving_average(data_frame, size):
     """This function is to find the moving average"""
