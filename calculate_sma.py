@@ -29,11 +29,11 @@ def moving_average(data_frame, size):
     return  data_frame['sma']
 df = read_and_procees_data()
 
-#print(moving_average(df, 3))
+print(moving_average(df, 3))
 
 if __name__ == '__main__':
    # procees_data = read_and_procees_data
    df = read_and_procees_data()
-   print(df.head())
+
 
 
