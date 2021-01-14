@@ -12,7 +12,6 @@ def read_and_procees_data():
     return df
 
 
-
 #mahdi
 def resample_data_based_on_input(interval_time=1, data_frame=None):
     data_frame = {'time': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
@@ -27,10 +26,11 @@ def resample_data_based_on_input(interval_time=1, data_frame=None):
 def moving_average(data_frame, size):
     """This function is to find the moving average"""
 
-    data_frame['sma'] = round(data_frame['sales'].rolling(window=size).mean(), 3)
+    data_frame['sma'] = round(data_frame['close'].rolling(window=size).mean(), 3)
     return  data_frame['sma']
+df = read_and_procees_data()
 
-print(moving_average(df, 3))
+#print(moving_average(df, 3))
 
 if __name__ == '__main__':
    # procees_data = read_and_procees_data
