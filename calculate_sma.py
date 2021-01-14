@@ -8,7 +8,6 @@ def read_and_procees_data():
    # print("from calculate sma",data)
 
     df = pd.DataFrame(data)
-
     return df
 
 
@@ -30,5 +29,6 @@ def calculate_sma(data_from_resample):
 
 if __name__ == '__main__':
    # procees_data = read_and_procees_data
-   read_and_procees_data()
+   df = read_and_procees_data()
+   print(df.head())
 
