@@ -1,8 +1,17 @@
 import pandas as pd
-
+from get_data import ExtractData
 #seam
 def read_and_procees_data():
-    pass
+    obj = ExtractData()
+    data = obj.getData('AMD','1hour')
+    
+   # print("from calculate sma",data)
+
+    df = pd.DataFrame(data)
+
+    return df
+
+
 
 #mahdi
 def resample_data_based_on_input(interval_time=1, data_frame=None):
@@ -15,9 +24,6 @@ def resample_data_based_on_input(interval_time=1, data_frame=None):
     pass
 
 #moving average
-# raw_data = {'month': [1,2,3,4,5,6,7,8,9,10,11,12], 'sales':[290.50,260,288,300,310,303,329.893,340.993,316,330.909,308,310]}
-# df = pd.DataFrame(raw_data)
-
 def moving_average(data_frame, size):
     """This function is to find the moving average"""
 
@@ -25,5 +31,9 @@ def moving_average(data_frame, size):
     return  data_frame['sma']
 
 print(moving_average(df, 3))
-# if __name__ == '__main__':
-#     procees_data = read_and_procees_data
+
+if __name__ == '__main__':
+   # procees_data = read_and_procees_data
+   read_and_procees_data()
+
+
