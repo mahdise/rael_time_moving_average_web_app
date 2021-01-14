@@ -23,12 +23,17 @@ def resample_data_based_on_input(interval_time=1, data_frame=None):
     return resample_data_frame
     pass
 
-#rana bai
-def calculate_sma(data_from_resample):
-    moving_avg_data_frame = None
-    return moving_avg_data_frame
+#moving average
+def moving_average(data_frame, size):
+    """This function is to find the moving average"""
+
+    data_frame['sma'] = round(data_frame['sales'].rolling(window=size).mean(), 3)
+    return  data_frame['sma']
+
+print(moving_average(df, 3))
 
 if __name__ == '__main__':
    # procees_data = read_and_procees_data
    read_and_procees_data()
+
 
