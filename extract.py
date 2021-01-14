@@ -17,7 +17,6 @@ import os
 import io
 import json
 
-load_dotenv()
 
 API_BASE_URL = 'https://api.marketstack.com/v1/'
 
@@ -74,6 +73,7 @@ def extract(id: str, fd_out,symbol,interval):
     devices = get_eod(id,symbol,interval)
 
     json.dump(devices, fd_out, ensure_ascii=False, indent=4)
+
 
 
 if __name__ == "__main__":
