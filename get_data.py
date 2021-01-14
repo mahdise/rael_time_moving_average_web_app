@@ -29,8 +29,6 @@ class ExtractData:
     content_str = ''
     if len(response.content) > 0:
         content_str = response.content.decode('utf-8')
-        print(content_str)
-        print()
 
     content_json = json.loads(content_str)
 
