@@ -28,6 +28,12 @@ class CallApi(threading.Thread):
             with io.open(self.output, 'w', encoding='utf8') as fd_out:
                 self.extract(fd_out)
 
+            # read and process data
+
+            # resemble data
+
+            # calculate moving average
+
             time.sleep(self.refresh_time)
 
     def extract(self, fd_out):
