@@ -13,13 +13,10 @@ def read_and_procees_data():
 
 #mahdi
 def resample_data_based_on_input(interval_time=1, data_frame=None):
-    data_frame = {'time': [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12],
-                  'price': [290, 260, 288, 300, 310, 303, 329, 340, 316, 330, 308, 310]}
+    index = pd.date_range('2/1/2020', periods=9, freq='T')
+    df = pd.DataFrame(data=range(9), index=index, columns=['count'])
 
-    df = pd.DataFrame(data_frame)
-    resample_data_frame = None
-    return resample_data_frame
-    pass
+    return data_frame.resample(interval_time).mean()
 
 #moving average
 def moving_average(data_frame, size):
