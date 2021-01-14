@@ -8,7 +8,6 @@ def read_and_procees_data():
    # print("from calculate sma",data)
 
     df = pd.DataFrame(data)
-
     return df
 
 
@@ -34,6 +33,7 @@ df = read_and_procees_data()
 
 if __name__ == '__main__':
    # procees_data = read_and_procees_data
-   read_and_procees_data()
+   df = read_and_procees_data()
+   print(df.head())
 
 
