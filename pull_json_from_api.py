@@ -4,12 +4,13 @@ import os
 import io
 import json
 import requests
+from utils_calculations import calculate_sma, compare_sma
 
 exitFlag = 0
 
 
 class CallApi(threading.Thread):
-    def __init__(self, refresh_time, interval_time, symbol):
+    def __init__(self, refresh_time, symbol, interval_time):
         threading.Thread.__init__(self)
         self.refresh_time = refresh_time
         self.interval_time = interval_time
@@ -31,8 +32,6 @@ class CallApi(threading.Thread):
             # read and process data
 
             # resemble data
-
-            # calculate moving average
 
             time.sleep(self.refresh_time)
 
@@ -74,10 +73,10 @@ class CallApi(threading.Thread):
         return None
 
 
-def pull_data_from_api(time_refresh, interval, symbol):
-    pull_data = CallApi(time_refresh, interval, symbol)
+def pull_data_from_api(time_refresh, symbol, interval="1min"):
+    pull_data = CallApi(time_refresh, symbol, interval)
     pull_data.start()
 
 
 if __name__ == '__main__':
-    pull_data_from_api(5, "1min", "AMD")
+    pull_data_from_api(5, "AMD")
