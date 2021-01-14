@@ -71,4 +71,7 @@ class CallApi(threading.Thread):
 def pull_data_from_api(time_refresh, interval, symbol):
     pull_data = CallApi(time_refresh, interval, symbol)
     pull_data.start()
-# pull_data_from_api(10,"1min",["AAPL","AMD"])
+
+
+if __name__ == '__main__':
+    pull_data_from_api(5, "1min", "AMD")
