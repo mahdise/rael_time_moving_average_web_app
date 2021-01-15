@@ -4,8 +4,10 @@ import os
 import io
 import json
 import requests
-from utils_calculations import calculate_sma, compare_sma
+import pandas as pd
 
+from utils_calculations import calculate_sma, compare_sma
+from get_data import ExtractData
 exitFlag = 0
 
 
@@ -26,51 +28,26 @@ class CallApi(threading.Thread):
         while self.run_time:
             print("call every " + str(self.refresh_time) + "s")
 
-            with io.open(self.output, 'w', encoding='utf8') as fd_out:
-                self.extract(fd_out)
+            list_of_data_frame = list()
+            for symbol in self.symbol:
 
-            # read and process data
+                obj = ExtractData()
+                data_list = obj.getData(symbol, '1min')
+                df = pd.DataFrame(columns=["date_time", "price"])
+                for index, data_time in enumerate(data_list):
+                    df.loc[index] = [data_time["date"]] + [data_time["close"]]
+                print(df)
+                print(df.dtypes)
+                # sma = calculate_sma(["2","4"], df)
+                # print(sma)
 
             # resemble data
-
             time.sleep(self.refresh_time)
 
-    def extract(self, fd_out):
 
-        devices = self.get_file()
 
-        json.dump(devices, fd_out, ensure_ascii=False, indent=4)
 
-    def get_file(self):
 
-        relative_url = "/intraday"
-        params = dict()
-        headers = dict()
-        params['access_key'] = self.api_key
-        params['interval'] = self.interval_time
-        params['symbols'] = self.symbol
-
-        url = self.api_base_url.strip("/") + relative_url
-        print("http: Fetching:   {}".format(url))
-        print("http: Parameters: {}".format(params))
-        print("http: Headers:  {}".format(headers))
-
-        response = self.session.get(url, params=params, headers=headers)
-
-        print("http: Status ({}), {} bytes returned:".format(
-            response.status_code, len(response.content)))
-        content_str = ''
-        if len(response.content) > 0:
-            content_str = response.content.decode('utf-8')
-            print(content_str)
-            print()
-
-        response.raise_for_status()
-
-        if len(content_str) > 0:
-            return json.loads(content_str)
-
-        return None
 
 
 def pull_data_from_api(time_refresh, symbol, interval="1min"):
@@ -79,4 +56,4 @@ def pull_data_from_api(time_refresh, symbol, interval="1min"):
 
 
 if __name__ == '__main__':
-    pull_data_from_api(5, "AMD")
+    pull_data_from_api(5, ["AMD","AAPL"])

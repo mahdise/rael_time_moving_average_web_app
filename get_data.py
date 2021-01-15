@@ -20,11 +20,11 @@ class ExtractData:
     relative_url = '/intraday'
     url = self.API_BASE_URL.strip("/") + relative_url
 
-    print("http: Fetching:   {}".format(url))
-    print("http: Parameters: {}".format(params))
-    print("http: Headers:  {}".format(headers))
-    print()
-    
+    # print("http: Fetching:   {}".format(url))
+    # print("http: Parameters: {}".format(params))
+    # print("http: Headers:  {}".format(headers))
+    # print()
+    #
     response = self.session.get(url, params=params, headers=headers)
     content_str = ''
     if len(response.content) > 0:
@@ -38,5 +38,5 @@ class ExtractData:
     
 
 
-obj = ExtractData()
-obj.getData('AMD','1hour')
+# obj = ExtractData()
+# print(obj.getData('AMD','1hour'))

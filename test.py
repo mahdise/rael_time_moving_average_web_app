@@ -4,6 +4,7 @@ from pull_json_from_api import pull_data_from_api
 
 def example_calculate_sma():
     index = pd.date_range('2/1/2020', periods=20, freq='T')
+    print(index)
     df = pd.DataFrame(data=range(20), index=index, columns=['count'])
     print(df)
     # print()

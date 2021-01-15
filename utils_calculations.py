@@ -7,7 +7,6 @@ def calculate_sma(list_of_periods, data_frame):
         period = period + "T"
         sma = data_frame.resample(period).mean()
         result_of_sma.append(sma)
-    print(result_of_sma)
 
     return result_of_sma
 
