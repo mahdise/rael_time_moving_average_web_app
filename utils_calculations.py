@@ -7,12 +7,12 @@ def calculate_sma(list_of_periods, data_frame):
         period = period + "T"
         sma = data_frame.resample(period).mean()
         result_of_sma.append(sma)
-
+    # print("",result_of_sma)
     return result_of_sma
 
 
 def compare_sma(list_data_frame):
-    result = None
+
 
     if len(list_data_frame):
         first_sma_data_frame = list_data_frame[0]
@@ -30,5 +30,6 @@ def compare_sma(list_data_frame):
         if not len(first_sma_data_frame) == 0:
             first_sma_data_frame.index = first_sma_data_frame.index.map(str)
             result = first_sma_data_frame.index.tolist()
-
+        else:
+            result = False
     return result

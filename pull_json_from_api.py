@@ -33,13 +33,22 @@ class CallApi(threading.Thread):
 
                 obj = ExtractData()
                 data_list = obj.getData(symbol, '1min')
+                # print(data_list)
                 df = pd.DataFrame(columns=["date_time", "price"])
                 for index, data_time in enumerate(data_list):
-                    df.loc[index] = [data_time["date"]] + [data_time["close"]]
-                print(df)
-                print(df.dtypes)
-                # sma = calculate_sma(["2","4"], df)
-                # print(sma)
+                    df.loc[index] = [data_time["date"]] + [data_time["last"]]
+                df["date_time"] = pd.to_datetime(df['date_time'])
+                # print(df.dtypes)
+                # print(df)
+                df.set_index('date_time', inplace=True)
+
+                # print(df.dtypes)
+                sma = calculate_sma(["2","5"], df)
+                crossover_result = compare_sma(sma)
+                if crossover_result:
+                    print("crossover_time : ",crossover_result)
+                else:
+                    print("do not have crossover")
 
             # resemble data
             time.sleep(self.refresh_time)
@@ -56,4 +65,4 @@ def pull_data_from_api(time_refresh, symbol, interval="1min"):
 
 
 if __name__ == '__main__':
-    pull_data_from_api(5, ["AMD","AAPL"])
+    pull_data_from_api(60, ["AMD"])
