@@ -12,11 +12,13 @@ exitFlag = 0
 
 
 class CallApi(threading.Thread):
-    def __init__(self, refresh_time, symbol, interval_time):
+    def __init__(self, refresh_time, symbol,period_first, period_second, interval_time):
         threading.Thread.__init__(self)
         self.refresh_time = refresh_time
         self.interval_time = interval_time
         self.symbol = symbol
+        self.period_first = period_first
+        self.period_second = period_second
         self.run_time = True
         self.api_key = 'b97ec7bc8b5e0f368b7db0a58cdebf55'
         self.api_base_url = 'https://api.marketstack.com/v1/'
@@ -43,26 +45,20 @@ class CallApi(threading.Thread):
                 df.set_index('date_time', inplace=True)
 
                 # print(df.dtypes)
-                sma = calculate_sma(["2","5"], df)
+                sma = calculate_sma([self.period_first, self.period_second], df)
                 crossover_result = compare_sma(sma)
                 if crossover_result:
                     print("crossover_time : ",crossover_result)
                 else:
                     print("do not have crossover")
 
-            # resemble data
             time.sleep(self.refresh_time)
 
 
-
-
-
-
-
-def pull_data_from_api(time_refresh, symbol, interval="1min"):
-    pull_data = CallApi(time_refresh, symbol, interval)
+def pull_data_from_api(time_refresh, symbol, period_first, period_second, interval="1min"):
+    pull_data = CallApi(time_refresh, symbol,period_first,period_second, interval)
     pull_data.start()
 
 
 if __name__ == '__main__':
-    pull_data_from_api(60, ["AMD"])
+    pull_data_from_api(time_refresh=60, symbol=["AMD"], period_first="2", period_second="5")

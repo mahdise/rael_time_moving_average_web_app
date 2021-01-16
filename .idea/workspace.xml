@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d72fdf2f-dae1-48d4-93fc-e9ae041c8903" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pull_json_from_api.py" beforeDir="false" afterPath="$PROJECT_DIR$/pull_json_from_api.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/utils_calculations.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils_calculations.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -43,30 +43,30 @@
         <counts>
           <entry key="dummy" value="32" />
           <entry key="gitignore" value="15" />
-          <entry key="py" value="3396" />
+          <entry key="py" value="3507" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="PLAIN_TEXT" value="47" />
-          <entry key="Python" value="3396" />
+          <entry key="Python" value="3507" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
-    <splitter split-orientation="horizontal" split-proportion="0.44324774">
+    <splitter split-orientation="horizontal" split-proportion="0.85299456">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pull_json_from_api.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="240">
-                  <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+                <state relative-caret-position="204">
+                  <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
                   <folding>
                     <element signature="e#0#16#0" expanded="true" />
-                    <marker date="1610738659962" expanded="true" signature="1801:1803" ph="..." />
-                    <marker date="1610738659962" expanded="true" signature="1871:1950" ph="..." />
+                    <marker date="1610755233961" expanded="true" signature="1921:1923" ph="..." />
+                    <marker date="1610755233961" expanded="true" signature="2015:2121" ph="..." />
                   </folding>
                 </state>
               </provider>
@@ -103,7 +103,7 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/utils_calculations.py">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="40">
+                <state relative-caret-position="48">
                   <caret line="14" selection-start-line="14" selection-end-line="14" />
                   <folding>
                     <marker date="1610738993897" expanded="true" signature="477:918" ph="..." />
@@ -142,8 +142,8 @@
         <option value="$PROJECT_DIR$/get_data.py" />
         <option value="$PROJECT_DIR$/test.py" />
         <option value="$PROJECT_DIR$/ssss.py" />
-        <option value="$PROJECT_DIR$/pull_json_from_api.py" />
         <option value="$PROJECT_DIR$/utils_calculations.py" />
+        <option value="$PROJECT_DIR$/pull_json_from_api.py" />
       </list>
     </option>
   </component>
@@ -357,20 +357,20 @@
   <component name="ToolWindowManager">
     <frame x="1912" y="-8" width="1376" height="784" extended-state="6" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.17638266" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.17638266" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Messages" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3276923" />
-      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.4430769" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.5538462" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32923076" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.66307694" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.087692305" />
       <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -488,24 +488,24 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pull_json_from_api.py">
+    <entry file="file://$PROJECT_DIR$/utils_calculations.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="48" column="46" selection-start-line="48" selection-start-column="46" selection-end-line="48" selection-end-column="46" />
+        <state relative-caret-position="48">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
           <folding>
-            <element signature="e#0#16#0" expanded="true" />
-            <marker date="1610738659962" expanded="true" signature="1801:1803" ph="..." />
-            <marker date="1610738659962" expanded="true" signature="1871:1950" ph="..." />
+            <marker date="1610738993897" expanded="true" signature="477:918" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/utils_calculations.py">
+    <entry file="file://$PROJECT_DIR$/pull_json_from_api.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="204">
+          <caret line="56" lean-forward="true" selection-start-line="56" selection-end-line="56" />
           <folding>
-            <marker date="1610738993897" expanded="true" signature="477:918" ph="..." />
+            <element signature="e#0#16#0" expanded="true" />
+            <marker date="1610755233961" expanded="true" signature="1921:1923" ph="..." />
+            <marker date="1610755233961" expanded="true" signature="2015:2121" ph="..." />
           </folding>
         </state>
       </provider>
