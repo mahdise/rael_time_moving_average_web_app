@@ -1,5 +1,6 @@
-<<<<<<< HEAD
+
 env_stock/
-=======
 VirtualEnv
->>>>>>> 472354f05e2e675575a9964e05bfcacd74649306
+__pycache__
+.vscode/
+
