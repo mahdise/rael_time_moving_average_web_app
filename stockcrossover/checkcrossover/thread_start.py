@@ -4,8 +4,8 @@ import os
 import requests
 import pandas as pd
 
-from stockcrossover.checkcrossover.utils import calculate_sma, compare_sma
-from stockcrossover.checkcrossover.extract_data_from_api import ExtractData
+from .utils import calculate_sma, compare_sma
+from .extract_data_from_api import ExtractData
 
 exitFlag = 0
 
@@ -52,6 +52,7 @@ class CallApi(threading.Thread):
                     crossover_[symbol] = crossover_result
                     # Todo (need to save into data base)
                     # need to save into data base
+                    #create csv file with the name of the user
                 else:
                     crossover_[symbol] = "No Crossover"
 

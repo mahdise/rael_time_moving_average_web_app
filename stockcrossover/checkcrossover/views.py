@@ -1,5 +1,6 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
+from .thread_start import pull_data_from_api
 
 
 class StartPullData(APIView):
@@ -19,8 +20,14 @@ class StartPullData(APIView):
         start_process_output = False
 
         if symbol and periods:
-            start_process_output = True
-            pass
+            first_period = periods[0]
+            second_period = periods[1]
+            try:
+                start_pulling_data = pull_data_from_api(symbol, first_period, second_period)
+                start_process_output = True
+            except:
+
+                start_process_output = False
 
         if requested_result is not None:
             response_data = dict(
