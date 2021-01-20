@@ -1,0 +1,19 @@
+<header>
+    <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-light">
+        <a class="navbar-brand" href="#">
+            <!--img src="" width="30" height="30" class="d-inline-block align-top" alt=""-->
+            Stockcrossover
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+               data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+               aria-expanded="false" aria-label="Toggle navigation"
+               (click)="toggleCollapsed()">
+              <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-nav" id="navbarSupportedContent" [ngClass]="{'collapse': collapsed, 'navbar-collapse': true}">
+              <a class="nav-item nav-link "  routerLink="#" routerLinkActive="active">Demo1</a>
+              <a class="nav-item nav-link"  routerLink="#" routerLinkActive="active">Demo2</a>
+        </div>
+    </nav>
+</header>
+    

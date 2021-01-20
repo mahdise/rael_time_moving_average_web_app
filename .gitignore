@@ -3,4 +3,4 @@ env_stock/
 VirtualEnv
 __pycache__
 .vscode/
-
+stockcrossover-webui/node_modules
